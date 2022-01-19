@@ -1,0 +1,32 @@
+body{
+    /* background-color: aqua; */
+    background: linear-gradient(#08183A, #152852, #4B3D60, #FD5E53, #FD5E53, #FD5E53, #FD5E53, #FC9C54, #FC9C54, #FFE373);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#header{
+    color: #FEC47F;
+    text-align: center;
+    font-family: "Playfair Display";
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#intervals{
+    border-style: outset;
+    border-radius: 10px;
+    padding: 3px
+    
+}
+
+#gintervals{
+    border-style: outset;
+    border-radius: 10px;
+    padding: 3px
+}
+
