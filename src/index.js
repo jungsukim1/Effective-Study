@@ -10,3 +10,4 @@ document.getElementById("myButton").onclick = function(){
     console.log("hello",myName);
 
 }
+
