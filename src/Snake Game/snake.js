@@ -36,7 +36,6 @@ export function onSnake(position, {ignoreHead = false} = {}){
         return equalPositions (segment, position)
     })
 }
-
 export function getSnakeHead(){
     return snakeBody[0]
 }

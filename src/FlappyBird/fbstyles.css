@@ -2,9 +2,18 @@
     box-sizing: border-box;
 }
 
+@-webkit-keyframes animBird {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -96px; }
+ }
+
+
 body{
-    margin: 0;
+    /* margin: 0; */
     overflow: hidden;
+    background: linear-gradient(#5FDBD5, #9DF3ED, #F6FFAA, #FBDA3B, #FBA241);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .title{
@@ -28,12 +37,39 @@ body{
 
 .bird{
     --bird-top: 0;
-    --bird-size: 60px;
     position: absolute;
-    background-color: yellow;
-    width: var(--bird-size);
-    height: var(--bird-size);
-    left: var(--bird-size);
+    background-image: url('/Effective-Study/Images/bird.png');
+    width: 34px;
+    height: 24px;
+    left: 34px;
     top: calc(var(--bird-top) * 1px);
+    -webkit-animation: animBird 300ms steps(4) infinite;
+    animation: animBird 300ms steps(4) infinite;
     border-radius: 50%;
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: calc(var(--pipe-width) * 1px);
+    left: calc(var(--pipe-left) * 1px);
+    
+}
+
+.pipe > .segment{
+    position: absolute;
+    width:100%;
+    background-image: url(/Effective-Study/Images/pipe.png);
+}
+
+.pipe > .top{
+    top: 0px;
+    bottom: calc(var(--hole-top) * 1px);
+}
+
+
+.pipe > .bottom{
+    bottom: 0;
+    top: calc(100vh - (var(--hole-top) * 1px) + calc(var(--hole-height) * 1px));
 }
